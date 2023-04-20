@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--
+    p: block형 태그
+    div: block형 태그
+    span: inline형 태그
+-->
+
+
+
+
+<style>
+    .custom-style {
+      color: red;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .margin{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .page-bottom-margin{
+        margin-bottom: 500px;
+    }
+    .fixedtextarea{
+        resize: none;
+    }
+    .leftmargin0{
+        margin-left: 0px;
+        padding-left: 20px;
+    }
+</style>
+
+<body>
+    <h1>This is h1</h1>
+    <h2>This is h2</h2>
+    <h3>This is h3</h3>
+    <h4>This is h4</h4>
+    <h5>This is h5</h5>
+    <h6>This is h6</h6>
+
+    <br>
+
+    <p>Hello, World!</p>
+    <p style=
+        "color:blue; 
+        background-color:rgb(88, 179, 88); 
+        font-size:24px; 
+        font-family: 'Courier New', Courier, monospace;
+        ">
+        <b>스타일</b> <em>태그</em>를 
+        <u>이</u><sup>것</sup><sub>저</sub><del>것</del> <ins>적용</ins>!
+    </p>
+    <p style=
+        "color:rgb(239, 252, 224); 
+        background-color:navy; 
+        font-size:36px; 
+        font-style:italic;
+        text-align: center;
+        ">
+        그 밖에도 이것저것
+    </p>
+
+
+    <p class = custom-style >사용자 지정 스타일!!</p>
+
+    <br>
+
+    <a href = "http://www.google.com"> 하이퍼링크</a>
+
+    <hr class ="margin"/>
+  
+    <ul>
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+    </ul>
+
+    <ul class = "leftmargin0">
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+    </ul>
+
+    <ol>
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+    </ol>
+    
+    <hr class ="margin"/>
+    
+    <ol>
+        <li>항목 1</li>
+            <ol>
+                <li>항목 1</li>
+                <li>항목 2</li>
+                <li>항목 3</li>
+            </ol>
+        <li>항목 2</li>
+            <ul>
+                <li>항목 1</li>
+                <li>항목 2</li>
+                <li>항목 3</li>
+            </ul>
+        <li>항목 3</li>
+    </ol>
+
+    <hr class ="margin"/>
+
+    수식으로 리스트 작성 가능<br>
+    ol>li*2+ul*2>li*3{$TEST}
+    : ol 안에 li 2개, ul2개 생성. ul 안에 li 3개 생성하며, TEST를 넣음<br>
+    결과:<br>
+        
+    <ol>
+        <li></li>
+        <li></li>
+        <ul>
+            <li>1TEST</li>
+            <li>2TEST</li>
+            <li>3TEST</li>
+        </ul>
+        <ul>
+            <li>1TEST</li>
+            <li>2TEST</li>
+            <li>3TEST</li>
+        </ul>
+    </ol>
+
+    <hr class ="margin"/>
+
+    <fieldset>
+        <legend>체크박스 그룹</legend>
+        <label>
+          <input type="checkbox" name="option1" value="1"> 체크박스 1
+        </label>
+        <label>
+          <input type="checkbox" name="option2" value="2"> 체크박스 2
+        </label>
+        <label>
+          <input type="checkbox" name="option3" value="3"> 체크박스 3
+        </label>
+    </fieldset>
+    
+    <hr class ="margin"/>
+
+    <fieldset>
+        <legend>라디오버튼 그룹</legend>
+        <label>
+          <input type="radio" name="group1" value="1"> 라디오버튼 1
+        </label>
+        <label>
+          <input type="radio" name="group1" value="2"> 라디오버튼 2
+        </label>
+        <label>
+          <input type="radio" name="group1" value="3"> 라디오버튼 3
+        </label>
+    </fieldset>
+    
+    <hr class ="margin"/>
+    
+    <textarea rows="10" cols="150" class="fixedtextarea">고정 텍스트 에리어</textarea>
+    <br>
+    <div style="width: 50%; height: 200px;">
+        <textarea style="width: 100%; height: 100%;"class="fixedtextarea">적응형 텍스트 에리어</textarea>
+    </div>
+    <br>
+    <textarea rows="4" cols="50" style="overflow: auto;">사용자지정 텍스트 에리어
+    </textarea>
+    
+    <hr class ="margin"/>
+    
+    <table border="1">
+        <tbody>
+          <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+            <td>1행 3열</td>
+            <td>1행 4열</td>
+            <td>1행 5열</td>
+            <td>1행 6열</td>
+            <td>1행 7열</td>
+          </tr>
+          <tr>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+            <td>2행 3열</td>
+            <td>2행 4열</td>
+            <td>2행 5열</td>
+            <td>2행 6열</td>
+            <td>2행 7열</td>
+          </tr>
+          <tr>
+            <td>3행 1열</td>
+            <td>3행 2열</td>
+            <td>3행 3열</td>
+            <td>3행 4열</td>
+            <td>3행 5열</td>
+            <td>3행 6열</td>
+            <td>3행 7열</td>
+          </tr>
+        </tbody>
+
+    </table border="1">
+    
+    
+    <hr class ="margin"/>
+    
+    <select>
+        <option value="">선택해주세요</option>
+        <option value="option1">옵션 1</option>
+        <option value="option2">옵션 2</option>
+        <option value="option3">옵션 3</option>
+    </select>
+    
+    <hr class ="margin"/>
+    
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    
+    <hr class ="margin"/>
+
+    <p class ="page-bottom-margin">
+
+      
+</body>
+</html>
+
