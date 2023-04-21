@@ -36,6 +36,19 @@
         margin-left: 0px;
         padding-left: 20px;
     }
+    .table_style{
+        width: 100%;
+        height: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    .table_style2{
+        width: 100%;
+        height: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-color: red;
+    }
 </style>
 
 <body>
@@ -45,6 +58,7 @@
     <h4>This is h4</h4>
     <h5>This is h5</h5>
     <h6>This is h6</h6>
+    <a href = "C:\이준호 임베디드\화면구현\html\01html\02basic.html" target ="_top"> 02로 이동! </a>
 
     <br>
 
@@ -71,9 +85,22 @@
 
     <p class = custom-style >사용자 지정 스타일!!</p>
 
-    <br>
+    <hr class ="margin"/>
 
     <a href = "http://www.google.com"> 하이퍼링크</a>
+    <a href = "http://www.google.com" target ="_blank"> 하이퍼링크</a>
+    <a href = "http://www.naver.com" target ="ifrm1"> 하이퍼링크</a>
+    <a href = "https://i.namu.wiki/i/u5sag0dchQ1zK0C37org7r7S-h99pRBGLNPFD8lqkMKr5XGf57zNxWTCoFES6_u4BJOy7xdlbzRQPQv1TwJaMuDJ7filinmaI-Kn862EeJHpLNJbNlqT_0Qo6gIReEP0Pb8oPFay8D-2cy3lrMjaKA.webp" target ="ifrm2"> 멍멍이</a>
+
+    
+    <br><br>
+
+    <iframe width = "50%" height="300px" name = "ifrm1">  </iframe>
+
+    <div style="width: 50%; height: 200px;">
+      <iframe width = "100%" height="100%" name = "ifrm2">  </iframe>
+    </div>
+
 
     <hr class ="margin"/>
   
@@ -178,7 +205,19 @@
     
     <hr class ="margin"/>
     
-    <table border="1">
+    <table border="1" width = 600px height = 120px>
+        <caption>테이블</caption>
+
+        <thead>
+            <tr>
+                <td>th 1행 1열</td>
+                <td>th 1행 2열</td>
+                <td>th 1행 3열</td>
+                <td>th 1행 4열</td>
+                <td>th 1행 5열</td>
+              </tr>
+        </thead>
+
         <tbody>
           <tr>
             <td>1행 1열</td>
@@ -186,8 +225,6 @@
             <td>1행 3열</td>
             <td>1행 4열</td>
             <td>1행 5열</td>
-            <td>1행 6열</td>
-            <td>1행 7열</td>
           </tr>
           <tr>
             <td>2행 1열</td>
@@ -195,8 +232,6 @@
             <td>2행 3열</td>
             <td>2행 4열</td>
             <td>2행 5열</td>
-            <td>2행 6열</td>
-            <td>2행 7열</td>
           </tr>
           <tr>
             <td>3행 1열</td>
@@ -204,14 +239,62 @@
             <td>3행 3열</td>
             <td>3행 4열</td>
             <td>3행 5열</td>
-            <td>3행 6열</td>
-            <td>3행 7열</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>tf 1행 1열</td>
+                <td>tf 1행 2열</td>
+                <td>tf 1행 3열</td>
+                <td>tf 1행 4열</td>
+                <td>tf 1행 5열</td>
+              </tr>
+        </tfoot>
+
+    </table border="1">
+    <br>
+    <table border="1" width = 600px height = 120px>
+        <tbody align = "center">
+          <tr>
+            <td colspan = "2">1행 1열</td>
+            <!-- <td>1행 2열</td> -->
+            <td>1행 3열</td>
+            <td colspan="2" rowspan="2">1행 4열</td>
+            <!-- <td>1행 5열</td> -->
+          </tr>
+          <tr>
+            <td colspan = "3">2행 1열</td>
+            <!-- <td>2행 2열</td> -->
+            <!-- <td>2행 3열</td> -->
+            <!-- <td>2행 4열</td> -->
+            <!-- <td>2행 5열</td> -->
+          </tr>
+          <tr>
+            <td rowspan="2">3행 1열</td>
+            <td>3행 2열</td>
+            <td colspan = "3">3행 3열</td>
+            <!-- <td>3행 4열</td> -->
+            <!-- <td>3행 5열</td> -->
+          </tr>
+          <tr>
+            <!-- <td>4행 1열</td> -->
+            <td colspan="3">4행 2열</td>
+            <!-- <td>4행 3열</td> -->
+            <!-- <td>4행 4열</td> -->
+            <td rowspan="2">4행 5열</td>
+          </tr>
+          <tr>
+            <td colspan="3">5행 1열</td>
+            <!-- <td>5행 2열</td> -->
+            <!-- <td>5행 3열</td> -->
+            <td>5행 4열</td>
+            <!-- <td>5행 5열</td> -->
           </tr>
         </tbody>
 
     </table border="1">
-    
-    
+
     <hr class ="margin"/>
     
     <select>
@@ -231,8 +314,111 @@
     
     <hr class ="margin"/>
 
-    <p class ="page-bottom-margin">
+    <p> 종합 결과물! </p>
 
+    <div style="width: 50%; height: 100px; margin-bottom: 100px;">
+        <p align = "center" style = "font-size: 24px;"> 주요 SNS 서비스별 이용율(%) </p>
+        <table border = "2" class = "table_style" style = "width: 100%; height: 100% " >
+            <thead>
+              <tr align = "center">
+                <td></td>
+                <td>페이스북</td>
+                <td>카카오스토리</td>
+                <td>밴드</td>
+                <td>인스타그램</td>
+                <td>트위터</td>
+              </tr>
+            </thead>
+              <tbody>
+              <tr>
+                <td align = "center">2015년</td>
+                <td>77.7</td>
+                <td>58.3</td>
+                <td>32.4</td>
+                <td>16.7</td>
+                <td>22.1</td>
+              </tr>
+              <tr>
+                <td align = "center">2016년</td>
+                <td>73.8</td>
+                <td>51.0</td>
+                <td>41.0</td>
+                <td>28.1</td>
+                <td>14.7</td>
+              </tr>
+            </tbody>
+    
+        </table border="1">
+    </div>
+
+    <div style="width: 50%; height: 500px; margin-bottom: 100px;">
+        <p align = "center" style = "font-size: 48  px; "> <u>표예제</u> </p>
+        <table border = "1" class = "table_style2" style = "width: 100%; height: 100%" >
+            <thead >
+              <tr align = "center">
+                <td colspan="6" style="font-size: 36px">한국의 차</td>
+              </tr>
+            </thead>
+              <tbody align = "center" >
+              <tr>
+                <td rowspan="6">뿌리차</td>
+                <td>인삼차</td>
+                <td rowspan="9">과일차</td>
+                <td>수정과</td>
+                <td rowspan="5">잎차</td>
+                <td>뽕잎차</td>
+              </tr>
+              <tr>
+                <td>당귀차</td>
+                <td>유자차</td>
+                <td>감잎차</td>
+              </tr>
+              <tr>
+                <td>생강차</td>
+                <td>구기자차</td>
+                <td>솔잎차</td>
+              </tr>
+              <tr>
+                <td>칡차</td>
+                <td>대추차</td>
+                <td>극화차</td>
+              </tr>
+              <tr>
+                <td>둥굴레차</td>
+                <td>오미자차</td>
+                <td>이슬차</td>
+              </tr>
+              <tr>
+                <td>마차</td>
+                <td>매실차</td>
+                <td  rowspan = "4">기타</td>
+                <td>두충차</td>
+              </tr>
+              <tr>
+                <td rowspan="3">곡물차</td>
+                <td>보리차</td>
+                <td>모과차</td>
+                <td>영지버섯차</td>
+              </tr>
+              <tr>
+                <td>옥수수차</td>
+                <td>상수유차</td>
+                <td>귤강차</td>
+              </tr>
+              <tr>
+                <td>현미차</td>
+                <td>탕자차</td>
+                <td>쌍화차</td>
+              </tr>
+            </tbody>
+    
+        </table border="1">
+    </div>
+
+
+
+
+    <p class ="page-bottom-margin">
       
 </body>
 </html>

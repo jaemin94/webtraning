@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function onClick(){ window.open("C:\\이준호 임베디드\\화면구현\\html\\01html\\14ATag.html", "_blank", "width=auto, height=auto")}
+    </script>
+
+</head>
+
+<style>
+    button.bt{
+        position:absolute;
+        background-color: black;
+        color: white;
+    }
+    .video{
+        width: 900px;
+        height: 600px;
+    }
+
+
+</style>
+
+<body>
+    <a href = "C:\이준호 임베디드\화면구현\html\01html\01basic.html">    <b>hello, world!</a>
+
+    <br>
+    <button class="bt" onclick="onClick()">button</button>
+    <br>
+    <video class = "video" src="./src/waterfall.mp4" autoplay muted loop controls></video>
+    <br>
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/b6Po4FmTA28?autoplay=1&mute=1" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow=
+            "accelerometer; 
+            autoplay; 
+            clipboard-write; 
+            encrypted-media;
+            gyroscope; 
+            picture-in-picture; 
+            web-share" 
+        allowfullscreen>
+    </iframe>
+
+    
+
+
+
+</body>
+</html>
