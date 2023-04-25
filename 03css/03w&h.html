@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        .prt{
+            height: 300px;
+            width: 300px;
+            background-color: royalblue;
+        }
+        .chd{
+            width: auto;
+            max-width: 200px;
+            min-width: 50px;  
+
+            height: auto;
+            min-height: 50px;
+            max-height: 200px;
+            background-color: orange;
+        }
+
+        /*  */
+
+        .h1{
+            color: blueviolet;
+        }
+        .h2{
+            color: rgb(255, 122, 61);
+        }
+        .h3{
+            color: rgba(255, 122, 61, 0.5);
+        }
+        .h4{
+            color: #F00FF0;
+        }
+
+        /*  */
+
+        .div{ 
+            height:100px; 
+            margin-bottom: 10px;
+            background-color: orange;
+       }
+
+       *{
+            color: red;
+            background-color: black;
+       }
+
+       #wrapper{
+            width: 600px;
+            height: 400px;
+            border: 1px solid;
+            margin: 10px;
+            background-image: url(../01html/src/dog.jpg);
+        }
+
+
+    </style>
+
+</head>
+<body>
+        <!-- .parent>.child*3 -> 1parent in 3child div-->
+    <div class="prt">
+        <div class="chd"></div>
+        <!-- <div class="chd"></div>
+        <div class="chd"></div> -->
+    </div>
+
+    <hr>
+
+    <h1 class = "h1">this is h1</h1>
+    <h2 class = "h2">this is h2</h2>
+    <h3 class = "h3">this is h3</h3>
+    <h4 class = "h4">this is h4</h4>
+    <h5>this is h4</h5>
+
+    <hr>
+
+    <div class="div" style = "width: 700px;"></div>
+
+    <div class="div" style = "width: 50%;"></div>
+
+    <div class="div" style = "width: 50vw;"></div>
+
+    <hr>
+
+
+
+
+
+</body>
+</html>
