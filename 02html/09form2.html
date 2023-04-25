@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+
+
+
+    </style>
+
+    <script>
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+
+    <!-- 
+        form : 사용자로부터 특정 정보를 받아 서버로 전달하는데 사용되는 태그
+        action속성 : 전달받은 서버 페이지
+        method속성 : 서버로 요청시 전달하는 방식
+        Get : 사용자 정보를 Query String으로 전달
+        Post : Request body(payload)로 전달
+     -->
+
+
+        <form action = "test.jsp" method="post">
+
+            <div>
+                <label for="name">이름: </label>    
+                <input 
+                    id="name" 
+                    name="name" 
+                    type = "text" 
+                    required
+                /><br />
+                <label for="pw">P W: </label>    
+                <input 
+                    id="pw" 
+                    name="pw" 
+                    type = "text" 
+                    pattern=
+                        "(?=(.*\d){1})(?=(.*[a-z]){1})(?=(.*[A-Z]){1})(?=(.*[~!@#$%^&*()_+|`\-={}[\]:;<>?,./]){1}).{10,18}||
+                        (?=(.*[a-z]){1})(?=(.*[A-Z]){1})(?=(.*[~!@#$%^&*()_+|`\-={}[\]:;<>?,./]){1}).{10,18}||
+                        (?=(.*\d){1})(?=(.*[A-Z]){1})(?=(.*[~!@#$%^&*()_+|`\-={}[\]:;<>?,./]){1}).{10,18}||
+                        (?=(.*\d){1})(?=(.*[a-z]){1})(?=(.*[~!@#$%^&*()_+|`\-={}[\]:;<>?,./]){1}).{10,18}||
+                        (?=(.*\d){1})(?=(.*[a-z]){1})(?=(.*[A-Z]){1}).{10,18}"
+                    title="영문소문자/대문자/특수문자/숫자중 3개 이상 포함하시고 길이는 10~18이어야 합니다."
+                    required
+                /><br />
+                <label for="age">나이: </label>     
+                <input 
+                    id="age" 
+                    name="age" 
+                    type = "text" 
+                    required
+                /><br />
+                <label for="addr">주소: </label>    
+                <input 
+                    id="addr" 
+                    name="addr" 
+                    type = "text" 
+                /><br />
+                <label for="mail">메일: </label>    
+                <input 
+                    id="mail" 
+                    name="mail" 
+                    type = "email" 
+                    disabled
+                /><br />
+
+                <div>
+                    <label for="pnum">번호: </label>
+                    <select name="ph--ln">
+                        <option value="010"> 010 </option>
+                        <option value="011"> 011</option>
+                        <option value="011"> 016</option>
+                        <option value="011"> 017</option>
+                    </select>
+                    <label>-</label>
+                    <input id="num1" name="age" type = "text" pattern="[0-9]{3,4}" style = "width:39px"/>
+                    <label>-</label>
+                    <input id="num" name="age" type = "text" pattern="[0-9]{4}" style = "width:39px"/>
+                </div>
+            </div><br />
+            
+            <div>
+                <fieldset style="width: 100px; height: auto;">
+                    <legend>
+                        <label for="sex">성별:</label> 
+                    </legend>
+                    <label>남</label> <input id="sex" name="sex" type = "radio" value="male"/>
+                    <label>여</label> <input id="sex" name="sex" type = "radio" value="female"/>
+    
+                </fieldset>
+            </div><br />
+
+            <div>
+                <fieldset style="width: 330px; height: auto;">
+                    <legend>
+                        <label for="hby">취미</label> 
+                    </legend>
+                    <input id="hby" name="hby" type = "checkbox" value="climing"/>  <label>등산</label>
+                    <input id="hby" name="hby" type = "checkbox" value="golf"/>     <label>골프</label>
+                    <input id="hby" name="hby" type = "checkbox" value="swimming"/> <label>수영</label>
+                    <input id="hby" name="hby" type = "checkbox" value="reading"/>  <label>독서</label>
+                    <input id="hby" name="hby" type = "checkbox" value="movie"/>    <label>영화</label>
+                </fieldset>
+            </div><br />
+
+            <div style="width: 50%; height: 200px;">
+                <textarea style="width: 100%; height: 100%;resize: none;"></textarea>
+            </div><br />
+
+            <input type="submit" value="벝튼"/>
+
+
+
+
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (?=(.*\d){1})(?=(.*[a-z]){1})(?=(.*[A-Z]){1})(?=(.*[~!@#$%^&*()_+|`\-={}[\]:;<>?,./]){1}).{10,18}|| -->
+    <form action = "test.jsp" method="post">
+    <label for="pw">P W: </label>    
+    <input 
+        id="pw" 
+        name="pw" 
+        type = "text" 
+        pattern=
+            "(?=(.*(\d|[a-z]|[A-Z]|.*[~!@#$%^&*()_+|`\-={}[\]:;<>?,./])){3,}).{10,18}"
+        title="영문소문자/대문자/특수문자/숫자중 3개 이상 포함하시고 길이는 10~18이어야 합니다."
+        required
+    /><br />
+    
+    <input type="submit" value="벝튼"/>
+    </form>
+</body>
+</html>

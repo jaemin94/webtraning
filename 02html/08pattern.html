@@ -8,6 +8,7 @@
 </head>
 <body>
     <form action="">
+        <!-- 
         <div>
             <label>TEL: </label>
             <input 
@@ -16,16 +17,51 @@
                 placeholder="0xx-xxxx-xxxx" 
                 required
             />
-        </div>
+        </div> 
         <div>
             <label>PW: </label>
             <input 
-            pattern="(?=.*[a-z]){8,16}" 
-                placeholder="0xx-xxxx-xxxx" 
+                pattern="(?=.*[a-z]){8,16}" 
+                title="올바른 값을 넣어주세요" 
                 required
             />
         </div>
-
+         -->
+        <div>
+            <label></label>
+            <input 
+                type="text"
+                pattern="" 
+                title="" 
+                required
+                oninvalid="this.setCustomValidity('dddd');"
+            />
+        </div>
+        <div>
+            <label></label>
+            <input 
+                type="text"
+                pattern="" 
+                title="" 
+                disabled
+            />
+        </div>        <div>
+            <label></label>
+            <input 
+                type="text"
+                pattern="" 
+                title="" 
+                required
+            />
+        </div>        <div>
+            <label></label>
+            <input 
+                type="text"
+                pattern="" 
+                title="" 
+                required
+            />
+        </div>
         <input type="submit"/>
     </form>
 </body>
