@@ -43,14 +43,14 @@
         /*  */
 
         .div{ 
-            height:100px; 
+            /* height:100px;  */
             margin-bottom: 10px;
             background-color: orange;
        }
 
        *{
-            color: red;
-            background-color: black;
+            /* color: red; */
+            /* background-color: black; */
        }
 
        #wrapper{
@@ -61,8 +61,35 @@
             background-image: url(../01html/src/dog.jpg);
         }
 
+        .div2{
+            width: 200px;
+            height: 200px;
+            border-top: 3px solid grey;
+            border-right: 4px dotted grey;
+            border-bottom: 5px dashed grey;
+            border-left: 6px double grey;
+        }
+
+
 
     </style>
+
+
+
+    <script>
+        const chkel = document.querySelector('.chk');
+        const txtel = document.querySelector('.txt');
+        // chkel.addEventListener('change',chkevt());
+        chkel.addEventListener('change',function(){
+            alert('function check');
+        });
+
+        function chkevt(){
+            alert('function check');
+        }
+
+    </script>
+
 
 </head>
 <body>
@@ -92,7 +119,13 @@
     <hr>
 
 
+    <div class="div">
+        <div class="div2">
 
+        </div>
+    </div>
+
+    <hr>
 
 
 </body>

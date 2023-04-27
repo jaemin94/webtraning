@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/04selector.css" />
+
+</head>
+<body>
+
+    <div class="d1">
+        <input type="text">
+        <a href="">aaa</a>
+    </div>
+
+    <hr>
+
+    <div class="d2">
+        <input type="checkbox"> <label>checkbox</label>
+    </div>
+
+    <hr>
+
+    <div class="d3">
+        <input type="checkbox" id="chk" class="chk"> <label>checkbox</label>
+        <input type="text" id="txt" class="txt" disabled>
+    </div>
+
+    <script>
+        const chkel = document.querySelector('.chk');
+        const txtel = document.querySelector('.txt');
+        // chkel.addEventListener('change',chkevt());
+        chkel.addEventListener('change',function(){
+            if(this.checked){
+                alert('function check. text disabled is false');
+                txtel.disabled=false;
+            }else{
+                alert('function check.text disabled is true');
+                txtel.disabled=true;
+            }
+        });
+
+    
+    </script>
+
+    <hr>
+
+    <span class="material-symbols-outlined">toggle_on</span>
+    <span class="material-symbols-outlined">toggle_off</span>
+
+    <fieldset>
+        <div class="d4">
+            <span>toggle button</span>
+            <input type="checkbox" id="chk1">
+            <label for="chk1"></label>
+        </div>
+    </fieldset>
+
+    <hr>
+
+    <fieldset>
+        <div class="d5">
+            <p>radio button</p>
+            <input type="radio" name="gender" value="male" id="r1">
+            <label for="r1"></label>
+            <input type="radio" name="gender" value="female" id="r2">
+            <label for="r2"></label>
+        </div>
+    </fieldset>
+
+    <hr>
+
+    <div class="d6">
+        <label>hello, world!</label>
+    </div>
+
+    <hr>
+
+    <div class="d7">
+        <ul>
+            <li><a href="">menu1</a></li>
+            <li><a href="">menu2</a></li>
+            <li><a href="">menu3</a></li>
+            <li><a href="">menu4</a></li>
+        </ul>
+    </div>
+
+
+
+<main>
+    <fieldset class="field">
+        <div class="wrapper">
+            <header>
+                <div class="top-header">
+                    <ul>
+                        <li><a href="">menu1</a></li>
+                        <li><a href="">menu2</a></li>
+                        <li><a href="">menu3</a></li>
+                        <li><a href="">menu4</a></li>
+                    </ul>
+                </div>
+                <nav>
+    
+                </nav>
+            </header>
+    
+        </div>
+    </fieldset>
+</main>
+
+
+
+
+
+</body>
+</html>
