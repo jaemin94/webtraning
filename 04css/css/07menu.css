@@ -1,0 +1,71 @@
+body{margin:0px;}
+ul{
+    list-style:none;
+    padding:0px;
+}
+header{
+    height:90px;
+    /* line-height:90px; */
+    /* border:1px solid gray; */
+    display:flex;
+    position:relative;
+    justify-content: space-between;
+    padding:0 120px;
+}
+header>.header--logo{
+    width:90px;
+    height:55px;
+}
+header>.header--logo>img{
+  
+    
+}
+
+/* 헤더 GNB */
+header>.gnb{
+    /* border: 1px solid red; */
+    width: 1200px;
+}
+header>.gnb>.one--depth{
+    width:1000px;
+    display:flex;
+    justify-content: right;
+    margin: 0px;
+}
+header>.gnb>.one--depth>li{
+    width:120px;
+    height:90px;
+    /* border:1px solid gray; */
+    text-align: center;
+
+    position:relative;
+}
+header>.gnb>.one--depth>li:hover .two--depth{
+    display: block;
+}
+header>.gnb>.one--depth>li>a{
+    display:block;
+    line-height: 90px;
+}
+header>.gnb>.one--depth>li>.two--depth{
+    /* border:1px solid gr  y; */
+    position:absolute;
+    top:90px;
+    left:0px;
+    width:100%;
+    display:none;
+}
+header>.gnb>.one--depth>li>.two--depth>li{
+    height:35px;
+}
+header>.gnb>.one--depth>li>.two--depth::before{
+    height:35px;
+}
+header>.gnb>.one--depth>li>.two--depth>li>a{}
+
+header>.gnb>.one--depth>li:hover .two--depth{
+    display:block;
+}
+
+/* 헤더 GNB-LINK */
+header>.gnb--link{}
