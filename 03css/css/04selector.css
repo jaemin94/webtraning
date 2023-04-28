@@ -244,7 +244,7 @@ main{
     padding: 0px;
     list-style: none;
     position: absolute;
-    /* display: none; */
+    display: none;
     top: 35px;
 }
 
