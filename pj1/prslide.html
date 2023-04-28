@@ -43,14 +43,48 @@ let val = 0;
 </script>
 
 <style>
+  .slide-frame{
+    width: 1024px;
+    height: 400px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
   .imageframe{
-    width: 200px;
-    height: 200px;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    /* display: flex; */
+    /* left:0;
+    right:0;
+    top: 0;
+    bottom: 0; */
   }
   .imageframe>img{
     width: 100%;
     height: 100%;
   }
+  .leftslide-button, .rightslide-button{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 1px solid black;
+    background-color: lightgray;
+    justify-content: center;
+    top: 50%;
+    bottom: 0;
+  }
+  .leftslide-button{
+    left:20px;
+  }
+  .rightslide-button{
+    right:20px;
+  }
+
+
+
+
+
 </style>
 
 
@@ -58,30 +92,28 @@ let val = 0;
   <body>
 
 
-    <div class="">
+    <!-- <div class="">
       <button onclick="addValue()">값 추가</button>
       <button onclick="printValues()">값 출력</button>
       <p id="output" value="asdf"></p>
-    </div>
+    </div> -->
 
 
+    <div class="slide-frame" >
+      <div class="leftslide-button">
+        <a onclick="decrease()"><img src="./src/arrow_back.svg"></a>
+      </div>
 
-    <hr>
-
-    <div class="" >
-      <button onclick="decrease()">감소</button>
-      <button onclick="increase()">증가</button>
-      <p id="result"></p>
-    </div>
-
-    <hr>
+      <div class="imageframe">
+        <img src="./src/login.png" id="img-output">
+      </div>
   
-    <div class="imageframe">
-      <img src="./src/login.png" id="img-output">
+      <div class="rightslide-button">
+        <a onclick="increase()"><img src="./src/arrow_forward.svg"></a>
+      </div>
     </div>
 
-
-
+    <p id="result"></p>
 
 
 
@@ -103,12 +135,6 @@ let val = 0;
       //     output.innerHTML += values[i] + "<br>";
       //   }
       // }
-
-
-
-
-
-
 
     </script>
   </body>
