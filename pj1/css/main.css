@@ -1,7 +1,29 @@
+/* 그리드 */
+
+.main{
+  height: 100%;
+  width: 70%;
+  /* width: 1024px; */
+  /* display: flex;  */
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid purple; */
+  /* position:relative; */
+  left: 0;
+  right: 0;
+  padding-top: 20px;
+  margin: 0 auto;
+  min-width: 60%;
+}
+
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(6, 6fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(4, 4fr);
+    grid-gap: 5px;
+    justify-content: center;
+    margin:0;
+    padding:0;
+    /* position: relative; */
   }
   
   .grid-item {
@@ -10,3 +32,40 @@
     text-align: center;
   }
   
+  /* 슬라이드 */
+  .slide-frame{
+    width: auto;
+    height: 600px;
+    min-width: 60%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    /* left: 0; */
+    /* right: 0; */
+  }
+  .imageframe{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+
+  }
+  .imageframe>img{
+    width: 100%;
+    height: 100%;
+  }
+  .leftslide-button, .rightslide-button{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 1px solid black;
+    background-color: lightgray;
+    justify-content: center;
+    top: 50%;
+    bottom: 0;
+  }
+  .leftslide-button{
+    left:20px;
+  }
+  .rightslide-button{
+    right:20px;
+  }
